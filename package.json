@@ -1,0 +1,31 @@
+{
+  "name": "kuyumcu-stok",
+  "version": "1.0.0",
+  "description": "Kuyumcu Stok Yönetim Programı",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-win": "electron-builder --win --x64",
+    "build-mac": "electron-builder --mac",
+    "build-linux": "electron-builder --linux"
+  },
+  "build": {
+    "appId": "com.kuyumcu.stok",
+    "productName": "Kuyumcu Stok Yönetimi",
+    "files": ["main.js", "kuyumcu.html", "icon.png"],
+    "win": {
+      "target": "nsis",
+      "icon": "icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerLanguages": ["tr_TR"],
+      "language": "1055"
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.0.0"
+  }
+}
