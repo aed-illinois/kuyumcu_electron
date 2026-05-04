@@ -5,9 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build-win": "electron-builder --win --x64",
-    "build-mac": "electron-builder --mac",
-    "build-linux": "electron-builder --linux"
+    "build-win": "electron-builder --win --x64 --publish never",
+    "build-mac": "electron-builder --mac --publish never"
   },
   "build": {
     "appId": "com.kuyumcu.stok",
@@ -19,9 +18,7 @@
     },
     "nsis": {
       "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "installerLanguages": ["tr_TR"],
-      "language": "1055"
+      "allowToChangeInstallationDirectory": true
     }
   },
   "devDependencies": {
